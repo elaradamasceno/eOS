@@ -1,26 +1,43 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
+  const width = 60;
+  const height = 60;
+
   const icons = [
     {
       id: 'eos',
-      width: 80,
-      height: 80,
+      width: width,
+      height: height,
       path: '/icons/icon-logo.svg',
       name: '',
     },
     {
       id: 'images',
-      width: 80,
-      height: 80,
+      width: width,
+      height: height,
       path: '/icons/icon-images.svg',
       name: '',
     },
     {
       id: 'reminder',
-      width: 80,
-      height: 80,
+      width: width + 6,
+      height: height + 6,
       path: '/icons/icon-reminder.svg',
+      name: '',
+    },
+    {
+      id: 'contact',
+      width: width + 16,
+      height: height + 16,
+      path: '/icons/icon-contact.svg',
+      name: '',
+    },
+    {
+      id: 'weather',
+      width: width,
+      height: height,
+      path: '/icons/icon-weather.png',
       name: '',
     },
   ];

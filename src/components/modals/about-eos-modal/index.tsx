@@ -1,34 +1,36 @@
 'use client';
 import { LaptopMinimal, X } from 'lucide-react';
 import { DraggableModal } from '../draggable-modal';
-import { useHeaderContext } from '@/context/headerContext';
+import { useActionContext } from '@/context/actionContext';
+
+import styles from './styles.module.scss';
 
 export default function AboutEOSModal() {
-  const { closeHeaderFileOptions } = useHeaderContext();
+  const { closeHeaderFileOptions } = useActionContext();
   return (
     <DraggableModal>
-      <div className="w-72 bg-gray-100/90 dark:bg-gray-800/90 dark:text-gray-100/90 shadow-lg rounded-xl flex flex-col border-1 border-gray-400/90 pb-6">
-        <header className="flex p-2 gap-2">
+      <div className={styles.container}>
+        <header className={styles.header}>
           <button
-            className="group bg-gray-600 rounded-full h-[14px] w-[14px] flex items-center justify-center hover:bg-red-400"
+            className={`${styles.WrapperButton} + group`}
             onClick={() => {
               closeHeaderFileOptions();
             }}
           >
-            <X size={12} className="text-gray-900 hidden group-hover:block" />
+            <X size={12} className={styles.buttonClose} />
           </button>
 
-          <span className="bg-gray-600 rounded-full h-[14px] w-[14px]"> </span>
-          <span className="bg-gray-600 rounded-full h-[14px] w-[14px]"> </span>
+          <span className={styles.spanButton}> </span>
+          <span className={styles.spanButton}> </span>
         </header>
 
-        <div className="flex flex-col justify-center items-center mt-10">
+        <div className={styles.content}>
           <LaptopMinimal size={60} />
 
-          <div className="mt-5 flex flex-col text-center gap-3">
-            <span className="font-bold text-[24px]">ElaraOS</span>
+          <div className={styles.wrapperInfo}>
+            <span className={styles.title}>ElaraOS</span>
 
-            <div className="flex flex-col text-sm">
+            <div className={styles.infos}>
               <span>
                 <b>Nextjs:</b> 14.2.5
               </span>

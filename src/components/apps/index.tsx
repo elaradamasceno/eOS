@@ -1,20 +1,24 @@
 'use client';
 import Image from 'next/image';
 
-import useIcons from '@/hooks/useIcons';
+import {
+  ApplicationIconsType,
+  ApplicationsType,
+  IconsType,
+} from '@/types/application-type';
+import { useActionContext } from '@/context/actionContext';
+
 import styles from './styles.module.scss';
-import { IconsType } from '@/types/icons-type';
-import { useHeaderContext } from '@/context/headerContext';
 
 interface AppsProps {
-  apps: IconsType[];
+  apps: ApplicationIconsType[];
 }
 
 export default function Apps({ apps }: AppsProps) {
-  const { closeHeaderFileOptions } = useHeaderContext();
+  const { closeHeaderFileOptions, openApplication } = useActionContext();
 
-  const handleAppAction = (id: string) => {
-    console.log('id ', id);
+  const handleAppAction = (id: ApplicationsType) => {
+    openApplication(id);
   };
 
   return (

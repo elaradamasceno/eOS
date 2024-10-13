@@ -4,12 +4,12 @@ import { Divider } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 
 import PopoverComponent from '../popover';
-import { MenuFilesType } from '@/types/header-type';
-import { useHeaderContext } from '@/context/headerContext';
+import { HeaderMenuFilesType } from '@/types/header-type';
+import { useActionContext } from '@/context/actionContext';
 
 type HandleActionsType = {
   onClose: () => void;
-  id: MenuFilesType;
+  id: HeaderMenuFilesType;
 };
 
 type ActionFunction = (onClose: () => void) => void;
@@ -18,9 +18,9 @@ export default function EOSPopover() {
   const t = useTranslations('Header.eOS');
   const router = useRouter();
 
-  const { openHeaderFileOptions } = useHeaderContext();
+  const { openHeaderFileOptions } = useActionContext();
 
-  const actionsMap: Record<MenuFilesType, ActionFunction> = {
+  const actionsMap: Record<HeaderMenuFilesType, ActionFunction> = {
     aboutEOS: (onClose) => {
       onClose();
       openHeaderFileOptions('aboutEOS');

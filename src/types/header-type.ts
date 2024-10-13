@@ -10,7 +10,7 @@ export type HeaderRightButtonType =
   | 'globe'
   | 'blocks';
 
-export type MenuFilesType =
+export type HeaderMenuFilesType =
   | 'aboutEOS'
   | 'apps'
   | 'settings'

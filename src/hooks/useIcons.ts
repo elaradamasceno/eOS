@@ -1,5 +1,5 @@
 import { getApplicationIcons } from '@/services/application';
-import { IconsType } from '@/types/icons-type';
+import { FooterType } from '@/types/application-type';
 
 function useIcons() {
   const onAppIcons = async () => {
@@ -8,7 +8,7 @@ function useIcons() {
     return apps;
   };
 
-  const onIconFooter = (): IconsType[] => {
+  const onIconFooter = (): FooterType[] => {
     const icons = [
       {
         id: 'eOS',

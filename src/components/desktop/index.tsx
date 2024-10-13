@@ -1,26 +1,40 @@
 'use client';
 import React from 'react';
 
-import { useHeaderContext } from '@/context/headerContext';
+import { useActionContext } from '@/context/actionContext';
 
 import AboutEOSModal from '../modals/about-eos-modal';
 import Apps from '../apps';
-import { IconsType } from '@/types/icons-type';
+import { ApplicationIconsType } from '@/types/application-type';
 
 const MemorizedAboutEOSModal = React.memo(AboutEOSModal);
 const MemorizedApps = React.memo(Apps);
 
 interface DesktopComponentProps {
-  apps: IconsType[];
+  apps: ApplicationIconsType[];
 }
 
 export default function DesktopComponent({ apps }: DesktopComponentProps) {
-  const { modalFromFileOptions } = useHeaderContext();
+  const { modalFromFileOptions } = useActionContext();
+
+  const RenderMenuHeader = () => {
+    return (
+      <>
+        {modalFromFileOptions === 'aboutEOS' && <MemorizedAboutEOSModal />}
+        {modalFromFileOptions === 'apps' && <MemorizedApps apps={apps} />}
+      </>
+    );
+  };
+
+  const RenderApplications = () => {
+    return <>dadadasdasdasdas</>;
+  };
 
   return (
     <div>
-      {modalFromFileOptions === 'aboutEOS' && <MemorizedAboutEOSModal />}
-      {modalFromFileOptions === 'apps' && <MemorizedApps apps={apps} />}
+      <RenderMenuHeader />
+
+      <RenderApplications />
     </div>
   );
 }

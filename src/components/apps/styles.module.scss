@@ -11,5 +11,5 @@
 }
 
 .image {
-  @apply hover:scale-105 transition-transform duration-500 cursor-pointer;
+  @apply hover:scale-105 transition-transform duration-500 cursor-pointer rounded-[10px];
 }

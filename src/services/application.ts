@@ -1,4 +1,4 @@
-import { ApplicationIconsType } from '@/types/icons-type';
+import { ApplicationIconsType } from '@/types/application-type';
 import { api } from './api';
 
 export async function getApplicationIcons(): Promise<ApplicationIconsType[]> {
