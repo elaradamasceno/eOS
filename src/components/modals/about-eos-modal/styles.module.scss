@@ -1,0 +1,43 @@
+.container {
+  @apply w-72 shadow-lg rounded-xl flex flex-col border-1 border-gray-400/90 pb-6;
+}
+
+.header {
+  @apply flex p-2 gap-2;
+}
+
+.WrapperButton {
+  @apply bg-gray-600 rounded-full h-[14px] w-[14px] flex items-center justify-center hover:bg-red-400;
+}
+
+.buttonClose {
+  @apply text-gray-900 hidden group-hover:block;
+}
+
+.spanButton {
+  @apply bg-gray-600 rounded-full h-[14px] w-[14px];
+}
+
+.content {
+  @apply flex flex-col justify-center items-center mt-10;
+}
+
+.wrapperInfo {
+  @apply mt-5 flex flex-col text-center gap-3;
+}
+
+.title {
+  @apply font-bold text-[24px];
+}
+
+.infos {
+  @apply flex flex-col text-sm;
+}
+
+:global(.light) .container {
+  @apply bg-gray-100/90;
+}
+
+:global(.dark) .container {
+  @apply bg-gray-800/90 text-gray-100/90;
+}
