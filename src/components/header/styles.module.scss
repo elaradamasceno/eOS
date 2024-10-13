@@ -1,0 +1,11 @@
+.container {
+  @apply w-full flex gap-2 justify-between bg-gray-700/30 text-sm text-white;
+}
+
+.menuFiles {
+  @apply flex cursor-pointer items-center pr-4 px-2;
+}
+
+.menuOptions {
+  @apply px-2 py-1 hover:bg-gray-400/40 hover:font-semibold;
+}

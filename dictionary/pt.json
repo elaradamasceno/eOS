@@ -1,0 +1,51 @@
+{
+  "Login": {
+    "enter": "Entrar"
+  },
+
+  "Header": {
+    "Files": {
+      "eOS": "eOS",
+      "file": "Arquivo",
+      "edit": "Editar",
+      "view": "Visualizar"
+    },
+    "eOS": {
+      "about": "Sobre o eOS",
+      "apps": "Aplicativos",
+      "config": "Ajustes do sistema",
+      "recentItems": "Itens recentes",
+      "turnOff": "Desligar"
+    }
+  },
+
+  "Footer": {
+    "Docker": {
+      "eOS": { "tooltip": "eOS" },
+      "arc": {
+        "tooltip": "Meu browser favorito"
+      },
+      "config": {
+        "tooltip": "Ajustes do sistema"
+      },
+      "vscode": {
+        "tooltip": "Meu editor favorito"
+      },
+      "firefox": {
+        "tooltip": "Firefox"
+      },
+      "terminal": {
+        "tooltip": "Terminal"
+      },
+      "mail": {
+        "tooltip": "Clique para pegar meu e-mail"
+      },
+      "spotify": {
+        "tooltip": "Clique para visualizar meu spotify"
+      },
+      "trash": {
+        "tooltip": "Lixo"
+      }
+    }
+  }
+}

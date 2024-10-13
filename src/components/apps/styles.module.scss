@@ -1,0 +1,15 @@
+.container {
+  @apply absolute bg-desktop-light bg-cover bg-no-repeat bg-center h-full top-0 w-full left-0 z-10;
+}
+
+.content {
+  @apply inset-0 backdrop-blur-lg h-full w-full;
+}
+
+.wrapperIcons {
+  @apply flex gap-8 items-center justify-center p-10;
+}
+
+.image {
+  @apply hover:scale-105 transition-transform duration-500 cursor-pointer;
+}

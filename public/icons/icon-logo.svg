@@ -1,0 +1,22 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"
+    width="100"
+    height="100"
+>
+    <!-- Corpo do Fantasma -->
+    <path
+        d="M50,5 C27.5,5 10,22.5 10,45 L10,95 L20,85 L30,95 L40,85 L50,95 L60,85 L70,95 L80,85 L90,95 L90,45 C90,22.5 72.5,5 50,5 Z"
+        fill="#00BFFF"
+        stroke="#B0E0E6"
+        stroke-width="2"
+    />
+
+    <!-- Olho Esquerdo -->
+    <circle cx="35" cy="40" r="12" fill="white" />
+    <circle cx="38" cy="40" r="6" fill="#000080" />
+
+    <!-- Olho Direito -->
+    <circle cx="65" cy="40" r="12" fill="white" />
+    <circle cx="62" cy="40" r="6" fill="#000080" />
+</svg>

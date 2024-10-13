@@ -1,0 +1,23 @@
+.container {
+  @apply flex flex-col gap-3;
+}
+
+.image {
+  @apply rounded-full;
+}
+
+.content {
+  @apply flex flex-col gap-2;
+}
+
+.text {
+  @apply text-xl text-center font-semibold;
+}
+
+:global(.light) .text {
+  @apply text-white/90;
+}
+
+:global(.dark) .text {
+  @apply text-gray-900/90;
+}

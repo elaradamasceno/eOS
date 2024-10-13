@@ -1,0 +1,15 @@
+.container {
+  @apply flex relative items-center w-full;
+}
+
+.button {
+  @apply flex w-full p-1 px-4 justify-between rounded-full items-center pr-1 hover:scale-105 transition-transform duration-500;
+}
+
+:global(.light) .button {
+  @apply bg-gray-500/40 text-black/80;
+}
+
+:global(.dark) .button {
+  @apply bg-gray-600/70 text-white/90;
+}

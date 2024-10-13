@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Abas coloridas na lateral atrás do caderno -->
+  <rect x="85" y="20" width="8" height="15" rx="2" ry="2" fill="#FF8040" />
+  <rect x="85" y="40" width="8" height="15" rx="2" ry="2" fill="#FFD700" />
+  <rect x="85" y="60" width="8" height="15" rx="2" ry="2" fill="#40E0D0" />
+
+  <!-- Fundo do caderno por cima das abas -->
+  <rect x="10" y="10" width="80" height="80" rx="15" ry="15" fill="#C08A4D" />
+
+  <!-- Ícone de perfil no centro -->
+  <circle cx="50" cy="50" r="15" fill="none" stroke="#916B3C" stroke-width="3" />
+  <circle cx="50" cy="45" r="7" fill="#916B3C" />
+  <path d="M50 55c-8 0-12 4-12 8v2h24v-2c0-4-4-8-12-8z" fill="#916B3C" />
+</svg>

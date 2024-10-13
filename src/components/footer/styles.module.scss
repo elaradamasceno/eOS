@@ -1,0 +1,11 @@
+.container {
+  @apply flex justify-center pb-1 cursor-pointer z-20;
+}
+
+.content {
+  @apply flex items-center gap-2 p-1 bg-gray-100/50 rounded-lg;
+}
+
+:global(.dark) .content {
+  @apply bg-gray-600/40;
+}

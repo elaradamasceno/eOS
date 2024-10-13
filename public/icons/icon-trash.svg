@@ -1,0 +1,35 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    width="64"
+    height="64"
+>
+    <!-- Corpo da Lixeira -->
+    <rect
+        x="20"
+        y="18"
+        width="24"
+        height="32"
+        fill="#888"
+        rx="2"
+    />
+    
+    <!-- Tampa da Lixeira -->
+    <rect
+        x="18"
+        y="12"
+        width="28"
+        height="8"
+        fill="#555"
+        rx="2"
+    />
+    
+    <!-- Detalhe na Tampa -->
+    <rect
+        x="22"
+        y="10"
+        width="20"
+        height="2"
+        fill="#333"
+    />
+</svg>

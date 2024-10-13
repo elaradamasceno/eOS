@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["import", "simple-import-sort"],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "max-len": ["error", { "code": 150, "tabWidth": 2, "ignoreUrls": true }],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "@typescript-eslint/no-namespace": "off",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Importações externas devem vir primeiro.
+          ["^\\u0000", "^@?\\w"],
+          // Depois as importações internas (a partir de paths absolutos e relativos).
+          ["^(@|components|utils|config|vendored-lib)(/.*|$)", "^\\./"]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error"
+  }
+}
