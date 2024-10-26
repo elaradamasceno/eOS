@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { PluginAPI } from 'tailwindcss/types/config';
 const { nextui } = require('@nextui-org/react');
 
 const config: Config = {
@@ -11,17 +12,26 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        sans: 'var(--font-inter)',
+      animation: {
+        slide: 'slide 2s infinite ease-in-out',
       },
       backgroundImage: {
-        'login-os': "url('/images/background-six.jpg')",
+        'login-os': "url('/images/abstract-background-two.jpg')",
         'desktop-light': "url('/images/home-light.jpg')",
       },
       backgroundColor: {
         'theme-light': 'bg-gray-100/50',
         'theme-primary-dark': 'bg-gray-600/40',
         'theme-secondary-dark': 'bg-gray-800/50',
+      },
+      colors: {
+        primary: 'rgba(59, 130, 246, 0.8)',
+        primaryDarkBg: 'rgba(31, 41, 55, 0.9)',
+        primaryLightBg: 'rgba(243, 244, 246, 0.9)',
+      },
+      fontFamily: {
+        sans: 'var(--font-inter)',
+        inter: ['var(--font-inter)', 'sans-serif'],
       },
       keyframes: {
         slide: {
@@ -30,11 +40,16 @@ const config: Config = {
           '100%': { transform: 'translateX(100%)' },
         },
       },
-      animation: {
-        slide: 'slide 2s infinite ease-in-out',
-      },
     },
   },
-  plugins: [nextui()],
+  plugins: [
+    nextui(),
+    function (api: PluginAPI) {
+      api.addBase({
+        a: { cursor: 'pointer' },
+      });
+    },
+  ],
 };
+
 export default config;

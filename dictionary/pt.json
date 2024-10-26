@@ -47,5 +47,18 @@
         "tooltip": "Lixo"
       }
     }
+  },
+
+  "Apps": {},
+
+  "PhotosModal": {
+    "title": "Fotos",
+    "menu": {
+      "photoLibrary": "Biblioteca",
+      "memories": "Memórias",
+      "peopleAndPets": "Pessoas e pets",
+      "places": "Lugares",
+      "recent": "Recentes"
+    }
   }
 }

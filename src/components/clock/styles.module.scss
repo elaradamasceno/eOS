@@ -1,0 +1,11 @@
+.clock {
+  @apply relative w-24 h-24 border-4 border-black bg-white flex items-center justify-center hover:scale-105 transition-transform duration-500 cursor-pointer rounded-full;
+}
+
+.hand {
+  @apply absolute bg-black rounded-[10px] bottom-[50%] origin-bottom;
+}
+
+.center {
+  @apply absolute bg-black w-[12px] h-[12px] rounded-[50%] z-[4];
+}

@@ -2,6 +2,7 @@
   "Login": {
     "enter": "Enter"
   },
+
   "Header": {
     "Files": {
       "eOS": "eOS",
@@ -45,6 +46,17 @@
       "trash": {
         "tooltip": "Trash"
       }
+    }
+  },
+
+  "PhotosModal": {
+    "title": "Photos",
+    "menu": {
+      "photoLibrary": "Photo Library",
+      "memories": "Memories",
+      "peopleAndPets": "People and Pets",
+      "places": "Places",
+      "recent": "Recent"
     }
   }
 }

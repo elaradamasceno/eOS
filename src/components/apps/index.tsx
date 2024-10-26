@@ -1,12 +1,14 @@
 'use client';
 import Image from 'next/image';
 
+import { useActionContext } from '@/context/actionContext';
+import { Clock } from '../clock';
+
 import {
   ApplicationIconsType,
   ApplicationsType,
   IconsType,
 } from '@/types/application-type';
-import { useActionContext } from '@/context/actionContext';
 
 import styles from './styles.module.scss';
 
@@ -33,18 +35,24 @@ export default function Apps({ apps }: AppsProps) {
           {apps &&
             apps.map((app) => {
               return (
-                <Image
-                  key={app.id}
-                  className={styles.image}
-                  src={app.path}
-                  alt=""
-                  width={app.width}
-                  height={app.height}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleAppAction(app.id);
-                  }}
-                />
+                <div>
+                  {app.id !== 'clock' && (
+                    <Image
+                      key={app.id}
+                      className={styles.image}
+                      src={app.path}
+                      alt=""
+                      width={app.width}
+                      height={app.height}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleAppAction(app.id);
+                      }}
+                    />
+                  )}
+
+                  {app.id === 'clock' && <Clock />}
+                </div>
               );
             })}
         </div>

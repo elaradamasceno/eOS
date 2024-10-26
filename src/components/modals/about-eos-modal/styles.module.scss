@@ -35,9 +35,9 @@
 }
 
 :global(.light) .container {
-  @apply bg-gray-100/90;
+  @apply bg-primaryLightBg;
 }
 
 :global(.dark) .container {
-  @apply bg-gray-800/90 text-gray-100/90;
+  @apply bg-primaryDarkBg text-gray-100/90;
 }

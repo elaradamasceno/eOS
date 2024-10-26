@@ -1,0 +1,50 @@
+.container {
+  @apply w-auto shadow-lg rounded-xl flex flex-col border-1 border-gray-400/90;
+}
+
+.content {
+  @apply flex;
+}
+
+.aside {
+  @apply border-r-1 border-solid border-gray-400/35;
+}
+
+.asideContent {
+  @apply flex flex-col mt-7 px-2;
+
+  h6 {
+    @apply text-xs font-bold;
+  }
+}
+
+.menu {
+  @apply flex flex-col items-start w-[150px] mt-1;
+}
+
+.sideButtons {
+  @apply py-1 px-3 flex items-center gap-2 w-full;
+
+  &:hover {
+    @apply bg-primary rounded;
+  }
+
+  svg {
+    @apply text-yellow-500;
+  }
+
+  span {
+    @apply text-sm;
+  }
+}
+
+.main {
+}
+
+:global(.light) .container {
+  @apply bg-primaryLightBg;
+}
+
+:global(.dark) .container {
+  @apply bg-primaryDarkBg text-gray-100/90;
+}

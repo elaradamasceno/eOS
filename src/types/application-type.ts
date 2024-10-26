@@ -15,6 +15,12 @@ export type ApplicationsType =
   | 'reminder'
   | 'contact'
   | 'weather'
+  | 'brunoapi'
+  | 'clock'
+  | 'notion'
+  | 'spotify'
+  | 'arc'
+  | 'vscode'
   | 'none';
 
 export interface FooterType extends IconsType {

@@ -1,0 +1,11 @@
+.mainButton {
+  @apply focus:outline-none focus:ring-0 active:outline-none active:ring-0 px-2 py-1 hover:bg-gray-400/40 hover:font-semibold;
+}
+
+.content {
+  @apply w-full flex flex-col items-start text-sm;
+}
+
+.buttons {
+  @apply w-full p-1 px-2 rounded-md hover:bg-primary text-justify;
+}

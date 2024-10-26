@@ -1,0 +1,19 @@
+.container {
+  @apply flex gap-2 m-2;
+}
+
+.closeIcon {
+  @apply bg-red-500 rounded-lg text-gray-800 h-[12px] w-[12px];
+}
+
+.minimizeIcon {
+  @apply bg-yellow-500 rounded-lg text-gray-800 h-[12px] w-[12px];
+}
+
+.fullScreenIcon {
+  @apply bg-green-500 rounded-lg text-gray-800 h-[12px] w-[12px];
+}
+
+.icons {
+  @apply hidden;
+}

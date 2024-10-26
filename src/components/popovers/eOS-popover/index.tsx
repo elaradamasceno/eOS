@@ -7,6 +7,8 @@ import PopoverComponent from '../popover';
 import { HeaderMenuFilesType } from '@/types/header-type';
 import { useActionContext } from '@/context/actionContext';
 
+import styles from './styles.module.scss';
+
 type HandleActionsType = {
   onClose: () => void;
   id: HeaderMenuFilesType;
@@ -54,45 +56,46 @@ export default function EOSPopover() {
   return (
     <PopoverComponent
       trigger={
-        <button
-          className="focus:outline-none focus:ring-0 active:outline-none active:ring-0 px-2 py-1 hover:bg-gray-400/40 hover:font-semibold"
-          color="primary"
-        >
+        <button className={styles.mainButton} color="primary">
           <Image src="/icons/icon-logo.svg" alt="" width={26} height={26} />
         </button>
       }
       content={(onClose) => (
-        <div className="w-full flex flex-col items-start text-sm">
+        <div className={styles.content}>
           <button
-            className="w-full p-1 px-2 rounded-md hover:bg-blue-500/80 text-justify"
+            className={styles.buttons}
             onClick={() => handleActions({ onClose, id: 'aboutEOS' })}
           >
             {t('about')}
           </button>
+
           <button
-            className="w-full p-1 px-2 rounded-md hover:bg-blue-500/80 text-justify"
+            className={styles.buttons}
             onClick={() => handleActions({ onClose, id: 'apps' })}
           >
             {t('apps')}
           </button>
+
           <Divider className="my-2" />
+
           <button
-            className="w-full p-1 px-2 rounded-md hover:bg-blue-500/80 text-justify"
+            className={styles.buttons}
             onClick={() => handleActions({ onClose, id: 'settings' })}
           >
             {t('config')}
           </button>
 
           <button
-            className="w-full p-1 px-2 rounded-md hover:bg-blue-500/80 text-justify"
+            className={styles.buttons}
             onClick={() => handleActions({ onClose, id: 'itens' })}
           >
             {t('recentItems')}
           </button>
+
           <Divider className="my-2" />
 
           <button
-            className="w-full p-1 px-2 rounded-md hover:bg-blue-500/80 text-justify"
+            className={styles.buttons}
             onClick={() => handleActions({ onClose, id: 'logout' })}
           >
             {t('turnOff')}

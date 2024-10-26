@@ -3,11 +3,12 @@
 }
 
 .content {
-  @apply inset-0 backdrop-blur-lg h-full w-full;
+  @apply inset-0 backdrop-blur-lg h-full w-full py-20;
 }
 
 .wrapperIcons {
-  @apply flex gap-8 items-center justify-center p-10;
+  @apply grid grid-cols-5 gap-4 px-32 gap-y-20 items-center justify-center;
+  // @apply flex gap-20 items-center justify-center p-10;
 }
 
 .image {

@@ -5,6 +5,7 @@ import { HeaderMenuFilesType } from '@/types/header-type';
 import { createContext, ReactNode, useContext, useState } from 'react';
 
 interface ActionContextProps {
+  showApplication: ApplicationsType;
   modalFromFileOptions: HeaderMenuFilesType;
   closeHeaderFileOptions: () => void;
   openApplication: (id: ApplicationsType) => void;
@@ -16,7 +17,7 @@ const ActionContext = createContext<ActionContextProps>(
 );
 
 function ActionProvider({ children }: { children: ReactNode }) {
-  const [applications, setApplications] = useState<ApplicationsType>(
+  const [showApplication, setShowApplication] = useState<ApplicationsType>(
     Common.NONE,
   );
 
@@ -24,7 +25,8 @@ function ActionProvider({ children }: { children: ReactNode }) {
     useState<HeaderMenuFilesType>(Common.NONE);
 
   const openApplication = (id: ApplicationsType) => {
-    setApplications(id);
+    closeHeaderFileOptions();
+    setShowApplication(id);
   };
 
   const openHeaderFileOptions = (option: HeaderMenuFilesType) => {
@@ -38,6 +40,7 @@ function ActionProvider({ children }: { children: ReactNode }) {
   return (
     <ActionContext.Provider
       value={{
+        showApplication,
         modalFromFileOptions,
         closeHeaderFileOptions,
         openApplication,

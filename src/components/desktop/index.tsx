@@ -1,11 +1,15 @@
 'use client';
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { useActionContext } from '@/context/actionContext';
 
 import AboutEOSModal from '../modals/about-eos-modal';
 import Apps from '../apps';
-import { ApplicationIconsType } from '@/types/application-type';
+import {
+  ApplicationIconsType,
+  ApplicationsType,
+} from '@/types/application-type';
+import PhotosModal from '../modals/photos-modal';
 
 const MemorizedAboutEOSModal = React.memo(AboutEOSModal);
 const MemorizedApps = React.memo(Apps);
@@ -15,7 +19,11 @@ interface DesktopComponentProps {
 }
 
 export default function DesktopComponent({ apps }: DesktopComponentProps) {
-  const { modalFromFileOptions } = useActionContext();
+  const { modalFromFileOptions, showApplication } = useActionContext();
+
+  const handleShowApplication = useMemo(() => {
+    return showApplication;
+  }, [showApplication]);
 
   const RenderMenuHeader = () => {
     return (
@@ -27,7 +35,22 @@ export default function DesktopComponent({ apps }: DesktopComponentProps) {
   };
 
   const RenderApplications = () => {
-    return <>dadadasdasdasdas</>;
+    const componentMap: Record<ApplicationsType, JSX.Element | null> = {
+      eos: null,
+      images: <PhotosModal />,
+      reminder: null,
+      contact: null,
+      weather: null,
+      brunoapi: null,
+      clock: null,
+      notion: null,
+      spotify: null,
+      arc: null,
+      vscode: null,
+      none: null,
+    };
+
+    return <>{componentMap[handleShowApplication] || <div></div>}</>;
   };
 
   return (
@@ -38,3 +61,5 @@ export default function DesktopComponent({ apps }: DesktopComponentProps) {
     </div>
   );
 }
+
+//terminal interpretador do v8
