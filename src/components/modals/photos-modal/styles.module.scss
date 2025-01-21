@@ -7,7 +7,7 @@
 }
 
 .aside {
-  @apply border-r-1 border-solid border-gray-400/35;
+  @apply border-r-1 border-solid border-gray-400/35 pb-2;
 }
 
 .asideContent {
@@ -20,14 +20,22 @@
 
 .menu {
   @apply flex flex-col items-start w-[150px] mt-1;
+
+  [data-slot='tabWrapper'] {
+    @apply w-full;
+  }
+
+  [data-slot='tab'] {
+    @apply flex p-0 justify-start;
+  }
+
+  [data-slot='cursor'] {
+    @apply bg-primary;
+  }
 }
 
 .sideButtons {
   @apply py-1 px-3 flex items-center gap-2 w-full;
-
-  &:hover {
-    @apply bg-primary rounded;
-  }
 
   svg {
     @apply text-yellow-500;
@@ -41,10 +49,57 @@
 .main {
 }
 
+.header {
+  @apply w-full h-10 rounded-tr-lg flex items-center border-b-1 px-4 justify-between bg-gray-200;
+}
+
+.sliderWrapper {
+  @apply w-[100px] flex items-center gap-2;
+}
+
+.iconsWrappper {
+  @apply flex gap-3 text-gray-500;
+}
+
+.section {
+  @apply min-w-[600px] min-h-[500px] px-4 py-2 flex flex-wrap flex-col gap-2 bg-gray-100;
+
+  span {
+    @apply text-xl font-semibold;
+  }
+
+  img {
+    @apply cursor-pointer;
+  }
+}
+
+.footer {
+  @apply w-full h-4 rounded-br-lg bg-gray-200;
+}
+
 :global(.light) .container {
   @apply bg-primaryLightBg;
 }
 
-:global(.dark) .container {
-  @apply bg-primaryDarkBg text-gray-100/90;
+:global(.dark) {
+  .container {
+    @apply bg-primaryDarkBg text-gray-100/90;
+  }
+
+  .main {
+    @apply text-gray-300;
+  }
+
+  .header {
+    @apply border-black/70;
+  }
+
+  .header,
+  .footer {
+    @apply bg-gray-700;
+  }
+
+  .section {
+    @apply bg-gray-800;
+  }
 }

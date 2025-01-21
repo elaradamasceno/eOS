@@ -10,14 +10,11 @@ export default function ModalButton() {
       </button>
 
       <button className={styles.minimizeIcon}>
-        <Minus size={12} className={`${styles.icons} group-hover:block`} />
+        <Minus size={12} className={`${styles.icons}`} />
       </button>
 
       <button className={styles.fullScreenIcon}>
-        <ChevronsUpDown
-          size={12}
-          className={`${styles.icons} group-hover:block`}
-        />
+        <ChevronsUpDown size={12} className={`${styles.icons}`} />
       </button>
     </div>
   );
